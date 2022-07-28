@@ -5,8 +5,8 @@
 .header {
   display: flex;
   align-items: center;
-	justify-content: space-between;
 	background-color: rgb(27, 27, 27);
+	min-height: 64px;
 }
 
 .header a {
@@ -16,14 +16,11 @@
 	font-size: 16px;
 }
 
-.header a:hover {
-	color: rgb(146, 146, 146);
-}
-
 .header .logo {
-	max-width: 170px;
+	max-width: 150px;
 }
  
 .header .links-group i {
 	margin-right: 5px;
+	margin-left: 55px;
 }
