@@ -1,0 +1,19 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	background-color: rgb(27, 27, 27);
+}
+.devBySpan {
+	font-size: 12px;
+}
+
+.devBySpan i {
+	font-size: 15px;
+	color: red;
+}
+
+.v-middle {
+	vertical-align: middle;
+}

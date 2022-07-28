@@ -1,3 +1,29 @@
 * {
-    margin: 0;
+	transition: 0.5s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+	justify-content: space-between;
+	background-color: rgb(27, 27, 27);
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+	font-size: 16px;
+}
+
+.header a:hover {
+	color: rgb(146, 146, 146);
+}
+
+.header .logo {
+	max-width: 170px;
+}
+ 
+.header .links-group i {
+	margin-right: 5px;
 }

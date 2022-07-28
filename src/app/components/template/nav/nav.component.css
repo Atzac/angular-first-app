@@ -1,0 +1,17 @@
+.sideNav {  
+	width: 220px;
+	background-color: rgb(54, 54, 54);
+}
+
+.sideNav i {
+	margin-right: 8px;
+	font-size: 20px;
+}
+
+.sideNav a {
+	color: white;
+}
+
+.container {
+	width: 200px;
+}
