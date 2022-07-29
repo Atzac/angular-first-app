@@ -12,7 +12,11 @@ import { MatListModule } from '@angular/material/list'
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
-import { HomeComponent } from './views/home/home.component'
+import { HomeComponent } from './views/home/home.component';
+import { ProductsComponent } from './views/products/products.component'
+import { MatCardModule } from '@angular/material/card';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { HomeComponent } from './views/home/home.component'
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,9 @@ import { HomeComponent } from './views/home/home.component'
     BrowserAnimationsModule,
     MatToolbarModule,
 		MatSidenavModule,
-		MatListModule
+		MatListModule,
+		MatCardModule,
+		MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
