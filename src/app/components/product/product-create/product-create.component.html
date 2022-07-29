@@ -20,22 +20,23 @@
 			/>
 		</mat-form-field>
 	</form>
+
+	<div class="group-buttons">
+		<button 
+			mat-button 
+			color="accent" 
+			(click)="cancel()"
+		> 
+			Cancelar
+		</button> 
+		<button 
+			mat-raised-button 
+			color="primary" 
+			(click)="createProduct()"
+			style="margin-left: 10px;"
+		> 
+			Cadastrar
+		</button> 
+	</div>
 </mat-card>
 
-<div class="gorup-buttons">
-	<button 
-    mat-button 
-	  color="accent" 
-	  (click)="cancel()"
-	> 
-		Cancelar
-	</button> 
-	<button 
-		mat-raised-button 
-		color="primary" 
-		(click)="createProduct()"
-		style="margin-left: 10px;"
-	> 
-		Cadastrar
-	</button> 
-</div>

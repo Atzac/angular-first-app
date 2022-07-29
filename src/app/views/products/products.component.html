@@ -1,8 +1,16 @@
-<p>Listagem de produtos</p>
-<button 
-  mat-raised-button 
-	color="primary" 
-	(click)="navigateToCreate()"
-> 
-  Cadastrar novo 
-</button>
+<mat-card>
+	<mat-card-title>Produtos</mat-card-title>
+	<mat-card-subtitle>Listagem de produtos</mat-card-subtitle>
+	
+	<app-product-read></app-product-read>
+
+	<button 
+    mat-raised-button 
+	  color="primary" 
+	  (click)="navigateToCreate()"
+		style="margin-top: 20px"
+  > 
+    Novo produto
+  </button>
+</mat-card>
+

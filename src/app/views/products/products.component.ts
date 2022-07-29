@@ -1,7 +1,6 @@
 import { Product } from './../../components/product/product.model';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-products',
@@ -13,12 +12,10 @@ export class ProductsComponent implements OnInit {
 	products: Product[];
 
   constructor(
-		private router: Router, 
-		private localStorageService: LocalStorageService) { }
+		private router: Router,  
+	) { }
 
   ngOnInit(): void {
-		let a = this.localStorageService.get('PRODUCTS')
-		console.log(a)
   }
 
 	navigateToCreate(): void {

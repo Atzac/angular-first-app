@@ -1,9 +1,9 @@
-.gorup-buttons {
-	float: right;
-	margin-top: 20px;
-}
-
 form {
 	display: flex;
 	flex-direction: column;
+}
+
+.group-buttons {
+	margin-top: 20px;
+	text-align: right;
 }
