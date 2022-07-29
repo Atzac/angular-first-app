@@ -21,7 +21,12 @@ export class LocalStorageService {
 
 	get(key: string): any {
     if (this.storage) {
-      return JSON.parse(this.storage.getItem(key) || "");
+			const data = this.storage.getItem(key)
+      if (data) {
+				return JSON.parse(data);
+			} else {
+				return []
+			}
     }
     return null;
   }

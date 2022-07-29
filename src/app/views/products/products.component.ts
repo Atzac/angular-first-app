@@ -12,11 +12,13 @@ export class ProductsComponent implements OnInit {
 
 	products: Product[];
 
-  constructor(private router: Router) {
-
-	}
+  constructor(
+		private router: Router, 
+		private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+		let a = this.localStorageService.get('PRODUCTS')
+		console.log(a)
   }
 
 	navigateToCreate(): void {

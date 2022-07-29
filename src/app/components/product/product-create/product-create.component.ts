@@ -10,6 +10,11 @@ import { MatSnackBar } from '@angular/material/snack-bar'
 })
 export class ProductCreateComponent implements OnInit {
 
+	product: Product = {
+		name: '',
+		price: null
+	}
+
   constructor(
 		  private localStorage: LocalStorageService, 
 		  private matSnackBar: MatSnackBar,
@@ -20,19 +25,26 @@ export class ProductCreateComponent implements OnInit {
   }
 
 	createProduct(): void {
-		// let data = this.localStorage.get('PRODUCTS');
+		let data = this.localStorage.get('PRODUCTS');
+		let newData;
 
-		// if (data) {
-		// 	data = [...data, product]
-		// }
-		// this.localStorage.set('PRODUCTS', data)
+		if (data) {
+			newData = [...data, this.product]
+		} else {
+			newData = [this.product]
+		}
+		this.localStorage.set('PRODUCTS', newData)
 		
 		this.showMessage()
 		this.router.navigate(['products'])
 	}
 
+	cancel(): void {
+		this.router.navigate(['products'])
+	}
+
 	showMessage(): void {
-		this.matSnackBar.open('Cadastrado!', '', {
+		this.matSnackBar.open('Cadastrado!', 'x', {
 			duration: 3000,
 			horizontalPosition: 'right',
 			verticalPosition: 'top'
