@@ -2,7 +2,9 @@ import { Router } from '@angular/router';
 import { Product } from './../product.model';
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { MatSnackBar } from '@angular/material/snack-bar'
+import { MatSnackBar } from '@angular/material/snack-bar';
+import * as uuid from 'uuid';
+
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
@@ -12,7 +14,8 @@ export class ProductCreateComponent implements OnInit {
 
 	product: Product = {
 		name: '',
-		price: null
+		price: null,
+		id: uuid.v4()
 	}
 
   constructor(
@@ -35,8 +38,8 @@ export class ProductCreateComponent implements OnInit {
 		}
 		this.localStorage.set('PRODUCTS', newData)
 		
-		this.showMessage()
-		this.router.navigate(['products'])
+		//this.showMessage()
+		window.location.replace('products')
 	}
 
 	cancel(): void {

@@ -1,0 +1,9 @@
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.group-buttons {
+	margin-top: 20px;
+	text-align: right;
+}
