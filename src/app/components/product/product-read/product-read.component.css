@@ -8,8 +8,26 @@ table {
 
 .edit > i{
 	color: rgb(93, 190, 255);
+	cursor: pointer;
 }
 
 .delete > i{
 	color: rgb(255, 24, 132);
+	cursor: pointer;
+}
+
+.modal-container {
+	box-sizing: border-box;
+	background-color: rgb(255, 255, 255);
+	width: 400px;
+	height: 150px;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+}
+
+.modal-container > p {
+	color: rgb(94, 94, 94);
+	font-size: 18px;
+	font-weight: 500;
 }

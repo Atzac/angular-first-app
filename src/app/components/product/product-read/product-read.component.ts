@@ -10,17 +10,24 @@ import { Router } from '@angular/router';
 })
 export class ProductReadComponent implements OnInit {
 
-  constructor(private localStorageService: LocalStorageService, private router: Router) { }
-
 	products: Product[];
 	displayedColumns = ['name', 'price', 'action']
+	newArrProducts: Product[]
+
+  constructor(private localStorage: LocalStorageService) { }
+
 
   ngOnInit(): void {
-		this.products = this.localStorageService.get('PRODUCTS')
+		this.products = this.localStorage.get('PRODUCTS')
 		console.log(this.products)
   }
 
-	// edit(): void {
-	// 	this.router.navigate(['products/update'])
-	// }
+	delete(id: string): void {
+		console.log(id)
+		let data = this.localStorage.get('PRODUCTS');
+
+		this.newArrProducts = data.filter((item: Product) => item.id !== id)
+		this.localStorage.set('PRODUCTS', this.newArrProducts)
+		window.location.reload()
+	}
 }
