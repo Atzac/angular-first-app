@@ -1,3 +1,4 @@
+import { HeaderService } from './../../template/header.service';
 import { Product } from './../product.model';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,7 +15,13 @@ export class ProductReadComponent implements OnInit {
 	displayedColumns = ['name', 'price', 'action']
 	newArrProducts: Product[]
 
-  constructor(private localStorage: LocalStorageService) { }
+  constructor(private localStorage: LocalStorageService, private headerService: HeaderService) { 
+		headerService.headerData = {
+			title: 'Produtos',
+			icon: 'storefront',
+			routeUrl: ''
+		}
+	 }
 
 
   ngOnInit(): void {
